@@ -98,6 +98,18 @@ async isAuthenticated(token) {
       throw error;
     }
   }
+
+
+
+  isAdmin(userId) {
+    try {
+      return this.userRepository.isAdmin(userId);
+    
+    } catch (error) {
+      console.log("Something went wrong", error);
+      throw error;
+    }
+  }
 }
 
 module.exports = UserService;
