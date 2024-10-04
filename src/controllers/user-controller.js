@@ -13,17 +13,17 @@ const create = async (req, res) => {
 
     return res.status(201).json({
       success: true,
-      message: "Successfully create a new user",
+      message: "Successfully created a new user",
       data: response,
       err: {},
     });
   } catch (error) {
-    console.log("Something went wrong", error);
-    return res.status(500).json({
-      message: "Something went wrong",
+    //console.log("Something went wrong", error);
+    return res.status(error.statusCode).json({
+      message: error.message,
       data: {},
       success: false,
-      err: error,
+      err: error.explanation,
     });
   }
 };

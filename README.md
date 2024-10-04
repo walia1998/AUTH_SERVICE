@@ -15,3 +15,6 @@ d:string
 ```
  npx sequelize seed:generate --name add-roles     //generate a seed
 ```
+
+
+## USE npm i http-status-codes
